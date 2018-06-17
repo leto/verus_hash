@@ -1,6 +1,6 @@
 import itertools
 import copy
-import haraka
+from haraka import haraka512256
 
 def header_hash(x):
     return verus_hash(x)
@@ -9,7 +9,7 @@ def verus_hash(x):
     len  = x.length()
     hash = ""
     pos  = 0
-    buf  = ""
+    buf  = []
 
     # put last result
 
@@ -21,7 +21,7 @@ def verus_hash(x):
         else
             i = len - pos
             # TODO copy partial chunk and fill rest of buffer with zeros
-        h = haraka512(buf2,buf)
+        h = haraka512256(buf)
 
         # TODO: nextOffset stuff
 
