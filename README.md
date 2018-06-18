@@ -7,7 +7,7 @@ For more information, see the main Verus website: https://veruscoin.io/
 
 ## Installing
 
-    python setup.py
+    python setup.py install
 
 ## FAQs
 
