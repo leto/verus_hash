@@ -207,23 +207,24 @@ def haraka256256(msg):
 	return list(itertools.chain(*s))
 
 
-# set some message bytes
-m = [i for i in range(64)]
+if __name__ == '__main__':
+    # set some message bytes
+    m = [i for i in range(64)]
 
-# print input
-print "= input bytes ="
-print ps(m) + "\n"
+    # print input
+    print "= input bytes ="
+    print ps(m) + "\n"
 
-# call Haraka-512/256
-digest = haraka512256(m)
+    # call Haraka-512/256
+    digest = haraka512256(m)
 
-# print digest
-print "= haraka-512/256 output bytes ="
-print ps(digest) + "\n"
+    # print digest
+    print "= haraka-512/256 output bytes ="
+    print ps(digest) + "\n"
 
-# call Haraka-256/256
-digest = haraka256256(m)
+    # call Haraka-256/256
+    digest = haraka256256(m)
 
-# print digest
-print "= haraka-256/256 output bytes ="
-print ps(digest) + "\n"
+    # print digest
+    print "= haraka-256/256 output bytes ="
+    print ps(digest) + "\n"
