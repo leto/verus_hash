@@ -2,8 +2,8 @@ import verus_hash
 from binascii import unhexlify, hexlify
 
 import unittest
-header_hex = ("XXXX")
-best_hash = 'XXX'
+header_hex = ("deadbeefdeadbeef")
+best_hash = ('codecodecode')
 
 class TestSequenceFunctions(unittest.TestCase):
 

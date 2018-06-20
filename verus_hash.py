@@ -6,22 +6,28 @@ def header_hash(x):
     return verus_hash(x)
 
 def verus_hash(x):
-    len       = x.length()
+    length    = len(x)
     hash      = ""
     pos       = 0
-    buf       = x[0:31]
+    buf       = [0] * 32
+    for i in xrange(0,31):
+        print i
+        if x[i]:
+            buf[i] = x[i]
+
+    #buf       = x[0:31]
     high, low = x[:1], x[1:2]
 
     # put last result
 
     while True:
-        if pos >= len:
+        if pos >= length:
             break
-        if ( len - pos >= 32 ):
+        if ( length - pos >= 32 ):
             # TODO copy 32 bytes, "full chunk"
             pass
         else:
-            i = len - pos
+            i = length - pos
             # TODO copy partial chunk and fill rest of buffer with zeros
         h = haraka512256(buf)
 
