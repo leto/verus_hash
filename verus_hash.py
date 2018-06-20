@@ -15,11 +15,12 @@ def verus_hash(x):
     # put last result
 
     while True:
-        if pos >= len
+        if pos >= len:
             break
-        if( len - pos >= 32 )
+        if ( len - pos >= 32 ):
             # TODO copy 32 bytes, "full chunk"
-        else
+            pass
+        else:
             i = len - pos
             # TODO copy partial chunk and fill rest of buffer with zeros
         h = haraka512256(buf)
