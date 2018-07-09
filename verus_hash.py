@@ -7,12 +7,14 @@ def header_hash(x):
 
 def verus_hash(x):
     length    = len(x)
+    print "Input is length=", length
     hash      = ""
     pos       = 0
-    buf       = [0] * 32
-    for i in xrange(0,31):
-        print i
-        if x[i]:
+    buf       = [0] * 64
+    print "buf=", buf
+    for i in xrange(0,length):
+        print "i=",i
+        if i <= len(x):
             buf[i] = x[i]
 
     #buf       = x[0:31]

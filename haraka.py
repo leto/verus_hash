@@ -50,6 +50,7 @@ def hexbyte(x):
 
 # print list of bytes in hex
 def ps(s):
+        print s
 	return " ".join([hexbyte(x) for x in s])
 
 # print state
