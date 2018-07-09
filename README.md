@@ -9,6 +9,10 @@ For more information, see the main Verus website: https://veruscoin.io/
 
     python setup.py install
 
+## Run tests
+
+    python test.py
+
 ## FAQs
 
 * What makes VerusHash quantum-resistant?
